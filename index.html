@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      class="btn btn-primary"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+    >
+      Toggle offcanvas
+    </button>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex=""
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          style="
+            position: relative;
+            left: -34px;
+            top: 20px;
+            margin: 0;
+            padding: 0;
+            opacity: 1;
+            background-color: #d59090;
+            width: 68px;
+            height: 68px;
+          "
+          class="btn-close rounded-circle"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+        <h5 id="offcanvasRightLabel">Linked File Settings</h5>
+      </div>
+      <div class="offcanvas-body" style="padding: 0">
+        <div
+          class="container-fluid"
+          style="
+            height: 170px;
+            padding: 40px 0;
+            margin-top: 40px;
+            background: var(--bg-secondary) 0% 0% no-repeat padding-box;
+            border-top: 2px solid #e8f3f6;
+          "
+        >
+          <h3 class="project-title">Lorem Ipsum Project</h3>
+          <div class="project-info">
+            <img src="french.png" alt="french-flag" class="flag" />
+            <div>
+              <p>French</p>
+              <p>
+                https://github.com/ant7/<span class="git-link"
+                  >ant-brackets-theme</span
+                >/blob/master/package.json
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="container-fluid import-rule">
+          <p>Import rules</p>
+          <button class="add-rule">Add import rule</button>
+        </div>
+        <ul>
+          <li>
+            <div>
+              <p>On <span>Obsolete</span> set the tags</p>
+              <div>
+                <span class="tag">Templates</span>
+                <span class="tag">File</span>
+              </div>
+            </div>
+            <button class="delete-button">
+              <img src="icon - delete.svg" alt="delete" />
+            </button>
+          </li>
+          <li>
+            <div>
+              <p>On <span>New</span> set the tag</p>
+              <div>
+                <span class="tag">File</span>
+              </div>
+            </div>
+            <button class="delete-button">
+              <img src="icon - delete.svg" alt="delete" />
+            </button>
+          </li>
+        </ul>
+        <div class="container-fluid import-rule">
+          <p>Export rules</p>
+          <button class="add-rule">Add export rule</button>
+        </div>
+        <ul>
+          <li class="export-rule">
+            <div class="first">
+              <p>
+                <span>Automatic strings</span> in Alphabetical order with the
+                tags
+              </p>
+              <div>
+                <span class="tag">Templates</span>
+                <span class="tag">File</span>
+              </div>
+            </div>
+            <button class="delete-button">
+              <img src="icon - delete.svg" alt="delete" />
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="second-section">
+        <div class="offcanvas-header">
+          <button
+            type="button"
+            style="
+              position: relative;
+              left: -18px;
+              top: 36px;
+              margin: 0;
+              padding: 0;
+              opacity: 1;
+              background-color: #d59090;
+            "
+            class="btn-close rounded-circle"
+            aria-label="Close"
+            id="close-second"
+          ></button>
+          <h5 id="offcanvasLeftLabel">Add Import rule</h5>
+        </div>
+        <form>
+          <div>
+            <p>ON IMPORT SET ON</p>
+            <select class="form-select" aria-label="Default select example">
+              <option selected value="all">All</option>
+              <option value="new">New</option>
+              <option value="obsolete">Obsolete</option>
+            </select>
+          </div>
+          <div>
+            <p>THE FOLLOWING TAGS</p>
+            <input
+              type="text"
+              placeholder="Start typing to add tags..."
+              id="tags-input"
+            />
+          </div>
+          <button class="form-button">Save import rule</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
